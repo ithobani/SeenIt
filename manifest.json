@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "SeenIt",
+  "description": "This extension marks or hides the YouTube videos you've seen already, so that you can discover new content more easily.",
+  "version": "1.2",
+ 
+  "author": "Imran Thobani",
+  
+  "icons": {"128":"seenit.png"},
+  
+  "browser_action": {
+    "default_icon": "seenit.png",
+    "default_popup": "popup.html"
+  },
+  
+  "content_scripts": [
+    {
+        "matches": [
+        "http://youtube.com/*", "http://*/*"],
+        "js": ["main.js"],
+        "run_at": "document_end",
+        "all_frames": true
+		}],
+	
+    "permissions": [
+      "history"
+    ],
+	
+	"background": {"scripts": ["background.js"]}
+}

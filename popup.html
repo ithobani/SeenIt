@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SeenIt Menu</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+		color: grey;
+		font-size: 12px;
+		font-family: "Arial";
+		font-weight: bold;
+		text-align: center;
+      }
+	  
+	  div {
+		  text-align: left;
+		  font-weight: normal;
+	  }
+
+      img {
+        margin: 5px;
+        border: 2px solid black;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+     -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+	  
+	  <p>OPTIONS</p>
+	  <div>
+	  <p>Remove videos I've watched from...</p>
+	  <label><input type="checkbox" id="recommended">Recommended videos</label><p>
+	  <label><input type="checkbox" id="search">Search results</label><p>
+	  <label><input type="checkbox" id="similar">Similar videos</label><p>
+	  </div>
+	  <div id="status"></div>
+	  
+  </body>
+</html>
+
